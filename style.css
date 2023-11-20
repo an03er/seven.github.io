@@ -1,0 +1,82 @@
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    background: linear-gradient(149deg, #20002c 0%, #9e73b0 42%, #6f0000 72%, #200122 100%);
+    animation: gradient 20s infinite linear;
+    background-size: 900%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.carousel{
+    display: flex;
+}
+
+.prev, .next{
+    cursor: pointer;
+    border-radius: 50%;
+    height: 80px;
+    margin: 10px;
+    width: 80px;
+    background-color: unset;
+    border: none;
+    color: none;
+}
+
+.next img{
+    height: 80px;
+    width: 80px;
+    margin-top: 80px;
+    mix-blend-mode: multiply;
+}
+
+.prev img{
+    height: 80px;
+    width: 80px;
+    margin-top: 80px;
+    mix-blend-mode: multiply;
+}
+
+.next{
+    right: 0;
+}
+
+.dots{
+    text-align: center;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background: #d15469;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 90% 0%;
+    }
+    50% {
+        background-position: 10% 90%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
